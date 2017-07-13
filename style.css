@@ -1,0 +1,40 @@
+html {
+  height: 100%;
+  font-size: 10px;
+}
+
+body { text-align: center;
+  background: #AAA;
+  height: 20%;
+}
+
+/* Animación con keyframe llamada "latidos" */
+@keyframes latidos {
+  from { transform: none; }
+  50% { transform: scale(1.5); }
+  to { transform: none; }
+}
+/* En la clase corazon vamos a llamar latidos en la animación  */
+.corazon {
+  margin: 20%;
+  display: inline-block;
+  font-size: 15rem;
+  text-shadow: 0 0 10px #333,1px 1px  0 #450505;
+  color: red;
+  animation: latidos 1s infinite;
+  transform-origin: center;
+}
+
+/* Queries para que se vea bien en tablets */
+@media (max-width: 800px) {
+  .corazon {
+    font-size: 10rem;
+  }
+}
+
+/* Queries para que se vea bien en móviles */
+@media (max-width: 500px) {
+  .corazon {
+    font-size: 5rem;
+  }
+}
